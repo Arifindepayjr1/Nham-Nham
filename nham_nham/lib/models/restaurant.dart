@@ -18,16 +18,17 @@ class Restaurant {
     required this.rating,
   });
 
-    Map<String, dynamic> toJson() {
+  Map<String, dynamic> toJson() {
     return {
       'id': id,
       'name': name,
       'description': description,
       'location': location.toJson(),
-      'categorys': categorys,
+      'categorys': categorys.map((cat) => cat.toJson()).toList(),
       'rating': rating,
     };
   }
+
 
   factory Restaurant.fromJson(Map<String, dynamic> json) {
     return Restaurant(
@@ -36,9 +37,10 @@ class Restaurant {
       description: json['description'] as String,
       location: Location.fromJson(json['location'] as Map<String, dynamic>),
       categorys: (json['categorys'] as List<dynamic>)
-          .map((category) => category as Category)
-          .toList(),
+        .map((catJson) => Category.fromJson(catJson as Map<String, dynamic>))
+        .toList(),
       rating: (json['rating'] as num).toDouble(),
     );
   }
+
 }
