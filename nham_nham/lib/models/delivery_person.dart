@@ -12,4 +12,22 @@ class DeliveryPerson {
     required this.phoneNumber,
     required this.currentLocation,
   });
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'phoneNumber': phoneNumber,
+      'currentLocation': currentLocation.toJson(),
+    };
+  }
+
+  factory DeliveryPerson.fromJson(Map<String, dynamic> json) {
+    return DeliveryPerson(
+      id: json['id'] as String,
+      name: json['name'] as String,
+      phoneNumber: json['phoneNumber'] as String,
+      currentLocation: Location.fromJson(json['currentLocation'] as Map<String, dynamic>),
+    );
+  }
 }
