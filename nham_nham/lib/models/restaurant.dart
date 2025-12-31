@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+import 'package:nham_nham/models/category.dart';
 import 'package:nham_nham/models/location.dart';
 
 class Restaurant {
@@ -17,4 +17,28 @@ class Restaurant {
     required this.categorys,
     required this.rating,
   });
+
+    Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'description': description,
+      'location': location.toJson(),
+      'categorys': categorys,
+      'rating': rating,
+    };
+  }
+
+  factory Restaurant.fromJson(Map<String, dynamic> json) {
+    return Restaurant(
+      id: json['id'] as String,
+      name: json['name'] as String,
+      description: json['description'] as String,
+      location: Location.fromJson(json['location'] as Map<String, dynamic>),
+      categorys: (json['categorys'] as List<dynamic>)
+          .map((category) => category as Category)
+          .toList(),
+      rating: (json['rating'] as num).toDouble(),
+    );
+  }
 }
