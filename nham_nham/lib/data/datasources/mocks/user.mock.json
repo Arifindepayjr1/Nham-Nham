@@ -1,0 +1,14 @@
+{
+  "user": {
+    "id": "user_001",
+    "userName": "Ki Arifin",
+    "email": "arifin.ki@example.com",
+    "password": "hashed_password_123",
+    "phoneNumber": "+85593569289",
+    "location": {
+      "latitude": 11.5449,
+      "longitude": 104.8922,
+      "address": "Street 240, Sangkat Chak Tomuk, Khan Daun Penh, Phnom Penh"
+    }
+  }
+}

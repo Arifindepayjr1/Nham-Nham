@@ -1,0 +1,242 @@
+{
+  "foods": [
+    {
+      "id": "food_001",
+      "name": "Margherita Pizza",
+      "description": "Classic pizza with tomato sauce, fresh mozzarella, and basil",
+      "price": 12.99,
+      "imageUrl": "https://example.com/images/margherita.jpg",
+      "restaurantId": "rest_001",
+      "category": {
+        "id": "cat_001",
+        "name": "Pizza",
+        "iconUrl": "https://example.com/icons/pizza.png"
+      },
+      "addOnGroups": [
+        {
+          "id": "group_001",
+          "name": "Extra Toppings",
+          "options": [
+            { "id": "addon_001", "name": "Extra Cheese", "price": 1.5 },
+            { "id": "addon_002", "name": "Mushrooms", "price": 1.0 },
+            { "id": "addon_003", "name": "Olives", "price": 1.0 }
+          ]
+        },
+        {
+          "id": "group_002",
+          "name": "Size",
+          "options": [
+            { "id": "addon_004", "name": "Large (+12 inch)", "price": 3.0 },
+            {
+              "id": "addon_005",
+              "name": "Extra Large (+16 inch)",
+              "price": 5.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food_002",
+      "name": "Pepperoni Pizza",
+      "description": "Traditional pepperoni pizza with mozzarella cheese",
+      "price": 14.99,
+      "imageUrl": "https://example.com/images/pepperoni.jpg",
+      "restaurantId": "rest_001",
+      "category": {
+        "id": "cat_001",
+        "name": "Pizza",
+        "iconUrl": "https://example.com/icons/pizza.png"
+      },
+      "addOnGroups": [
+        {
+          "id": "group_001",
+          "name": "Extra Toppings",
+          "options": [
+            { "id": "addon_001", "name": "Extra Cheese", "price": 1.5 },
+            { "id": "addon_006", "name": "Extra Pepperoni", "price": 2.0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food_003",
+      "name": "Classic Beef Burger",
+      "description": "Juicy beef patty with lettuce, tomato, onion, and special sauce",
+      "price": 8.99,
+      "imageUrl": "https://example.com/images/beef-burger.jpg",
+      "restaurantId": "rest_002",
+      "category": {
+        "id": "cat_002",
+        "name": "Burgers",
+        "iconUrl": "https://example.com/icons/burger.png"
+      },
+      "addOnGroups": [
+        {
+          "id": "group_003",
+          "name": "Add-ons",
+          "options": [
+            { "id": "addon_007", "name": "Bacon", "price": 2.0 },
+            { "id": "addon_008", "name": "Fried Egg", "price": 1.5 },
+            { "id": "addon_009", "name": "Extra Patty", "price": 3.5 }
+          ]
+        },
+        {
+          "id": "group_004",
+          "name": "Sides",
+          "options": [
+            { "id": "addon_010", "name": "French Fries", "price": 2.5 },
+            { "id": "addon_011", "name": "Onion Rings", "price": 3.0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food_004",
+      "name": "Chicken Burger",
+      "description": "Crispy fried chicken breast with coleslaw and mayo",
+      "price": 7.99,
+      "imageUrl": "https://example.com/images/chicken-burger.jpg",
+      "restaurantId": "rest_002",
+      "category": {
+        "id": "cat_002",
+        "name": "Burgers",
+        "iconUrl": "https://example.com/icons/burger.png"
+      },
+      "addOnGroups": [
+        {
+          "id": "group_003",
+          "name": "Add-ons",
+          "options": [
+            { "id": "addon_012", "name": "Cheese Slice", "price": 1.0 },
+            { "id": "addon_013", "name": "Spicy Mayo", "price": 0.5 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food_005",
+      "name": "Pho Bo (Beef Noodle Soup)",
+      "description": "Traditional Vietnamese beef noodle soup with herbs",
+      "price": 6.99,
+      "imageUrl": "https://example.com/images/pho-bo.jpg",
+      "restaurantId": "rest_003",
+      "category": {
+        "id": "cat_003",
+        "name": "Asian",
+        "iconUrl": "https://example.com/icons/asian.png"
+      },
+      "addOnGroups": [
+        {
+          "id": "group_005",
+          "name": "Extras",
+          "options": [
+            { "id": "addon_014", "name": "Extra Beef", "price": 2.5 },
+            { "id": "addon_015", "name": "Extra Noodles", "price": 1.5 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food_006",
+      "name": "Spring Rolls",
+      "description": "Fresh Vietnamese spring rolls with peanut sauce",
+      "price": 4.99,
+      "imageUrl": "https://example.com/images/spring-rolls.jpg",
+      "restaurantId": "rest_003",
+      "category": {
+        "id": "cat_003",
+        "name": "Asian",
+        "iconUrl": "https://example.com/icons/asian.png"
+      },
+      "addOnGroups": []
+    },
+    {
+      "id": "food_007",
+      "name": "Amok Trey (Fish Amok)",
+      "description": "Traditional Cambodian steamed fish curry with coconut milk",
+      "price": 7.5,
+      "imageUrl": "https://example.com/images/amok-trey.jpg",
+      "restaurantId": "rest_004",
+      "category": {
+        "id": "cat_003",
+        "name": "Asian",
+        "iconUrl": "https://example.com/icons/asian.png"
+      },
+      "addOnGroups": [
+        {
+          "id": "group_006",
+          "name": "Side Dishes",
+          "options": [
+            { "id": "addon_016", "name": "Steamed Rice", "price": 1.5 },
+            { "id": "addon_017", "name": "Baguette", "price": 1.0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food_008",
+      "name": "Lok Lak (Khmer Beef)",
+      "description": "Stir-fried beef with vegetables and black pepper sauce",
+      "price": 8.5,
+      "imageUrl": "https://example.com/images/lok-lak.jpg",
+      "restaurantId": "rest_004",
+      "category": {
+        "id": "cat_003",
+        "name": "Asian",
+        "iconUrl": "https://example.com/icons/asian.png"
+      },
+      "addOnGroups": [
+        {
+          "id": "group_006",
+          "name": "Side Dishes",
+          "options": [
+            { "id": "addon_016", "name": "Steamed Rice", "price": 1.5 },
+            { "id": "addon_018", "name": "Fried Rice", "price": 2.5 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food_009",
+      "name": "Chocolate Lava Cake",
+      "description": "Warm chocolate cake with molten center, served with vanilla ice cream",
+      "price": 5.99,
+      "imageUrl": "https://example.com/images/lava-cake.jpg",
+      "restaurantId": "rest_005",
+      "category": {
+        "id": "cat_004",
+        "name": "Desserts",
+        "iconUrl": "https://example.com/icons/dessert.png"
+      },
+      "addOnGroups": [
+        {
+          "id": "group_007",
+          "name": "Extras",
+          "options": [
+            {
+              "id": "addon_019",
+              "name": "Extra Ice Cream Scoop",
+              "price": 2.0
+            },
+            { "id": "addon_020", "name": "Whipped Cream", "price": 1.0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food_010",
+      "name": "Tiramisu",
+      "description": "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone",
+      "price": 6.5,
+      "imageUrl": "https://example.com/images/tiramisu.jpg",
+      "restaurantId": "rest_005",
+      "category": {
+        "id": "cat_004",
+        "name": "Desserts",
+        "iconUrl": "https://example.com/icons/dessert.png"
+      },
+      "addOnGroups": []
+    }
+  ]
+}
