@@ -1,0 +1,53 @@
+{
+  "cart": {
+    "userId": "user_001",
+    "items": [
+      {
+        "foodId": "food_001",
+        "price": 12.99,
+        "quantity": 2,
+        "selectedAddOns": [
+          {
+            "optionId": "addon_001",
+            "name": "Extra Cheese",
+            "price": 1.5
+          },
+          {
+            "optionId": "addon_004",
+            "name": "Large (+12 inch)",
+            "price": 3.0
+          }
+        ]
+      },
+      {
+        "foodId": "food_003",
+        "price": 8.99,
+        "quantity": 1,
+        "selectedAddOns": [
+          {
+            "optionId": "addon_007",
+            "name": "Bacon",
+            "price": 2.0
+          },
+          {
+            "optionId": "addon_010",
+            "name": "French Fries",
+            "price": 2.5
+          }
+        ]
+      },
+      {
+        "foodId": "food_013",
+        "price": 3.5,
+        "quantity": 2,
+        "selectedAddOns": [
+          {
+            "optionId": "addon_029",
+            "name": "Extra Shot",
+            "price": 1.5
+          }
+        ]
+      }
+    ]
+  }
+}

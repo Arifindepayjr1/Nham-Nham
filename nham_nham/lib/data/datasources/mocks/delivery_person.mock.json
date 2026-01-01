@@ -1,0 +1,54 @@
+{
+  "deliveryPersons": [
+    {
+      "id": "driver_001",
+      "name": "Sopheap Nguyen",
+      "phoneNumber": "+855987654321",
+      "currentLocation": {
+        "latitude": 11.55,
+        "longitude": 104.92,
+        "address": "Street 271, Khan Chamkarmon, Phnom Penh"
+      }
+    },
+    {
+      "id": "driver_002",
+      "name": "Dara Kim",
+      "phoneNumber": "+855987654322",
+      "currentLocation": {
+        "latitude": 11.558,
+        "longitude": 104.915,
+        "address": "Street 308, Khan Chamkarmon, Phnom Penh"
+      }
+    },
+    {
+      "id": "driver_003",
+      "name": "Vibol Chea",
+      "phoneNumber": "+855987654323",
+      "currentLocation": {
+        "latitude": 11.552,
+        "longitude": 104.928,
+        "address": "Street 51, Khan Chamkarmon, Phnom Penh"
+      }
+    },
+    {
+      "id": "driver_004",
+      "name": "Chanthy Sok",
+      "phoneNumber": "+855987654324",
+      "currentLocation": {
+        "latitude": 11.549,
+        "longitude": 104.922,
+        "address": "Street 302, Khan Chamkarmon, Phnom Penh"
+      }
+    },
+    {
+      "id": "driver_005",
+      "name": "Bopha Lim",
+      "phoneNumber": "+855987654325",
+      "currentLocation": {
+        "latitude": 11.561,
+        "longitude": 104.919,
+        "address": "Street 360, Khan Chamkarmon, Phnom Penh"
+      }
+    }
+  ]
+}

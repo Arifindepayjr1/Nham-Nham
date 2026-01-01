@@ -1,0 +1,189 @@
+{
+  "restaurants": [
+    {
+      "id": "rest_001",
+      "name": "Pizza Palace",
+      "description": "Authentic Italian pizza made with fresh ingredients and traditional recipes",
+      "location": {
+        "latitude": 11.5564,
+        "longitude": 104.9282,
+        "address": "Street 51, Sangkat Boeung Keng Kang, Khan Chamkarmon, Phnom Penh"
+      },
+      "categorys": [
+        {
+          "id": "cat_001",
+          "name": "Pizza",
+          "iconUrl": "https://example.com/icons/pizza.png"
+        },
+        {
+          "id": "cat_004",
+          "name": "Desserts",
+          "iconUrl": "https://example.com/icons/dessert.png"
+        }
+      ],
+      "rating": 4.7
+    },
+    {
+      "id": "rest_002",
+      "name": "Burger House",
+      "description": "Premium gourmet burgers with locally sourced ingredients",
+      "location": {
+        "latitude": 11.5588,
+        "longitude": 104.9178,
+        "address": "Street 308, Sangkat Boeung Keng Kang, Khan Chamkarmon, Phnom Penh"
+      },
+      "categorys": [
+        {
+          "id": "cat_002",
+          "name": "Burgers",
+          "iconUrl": "https://example.com/icons/burger.png"
+        }
+      ],
+      "rating": 4.5
+    },
+    {
+      "id": "rest_003",
+      "name": "Pho Kitchen",
+      "description": "Traditional Vietnamese cuisine with modern twist",
+      "location": {
+        "latitude": 11.5501,
+        "longitude": 104.928,
+        "address": "Street 136, Sangkat Veal Vong, Khan 7 Makara, Phnom Penh"
+      },
+      "categorys": [
+        {
+          "id": "cat_003",
+          "name": "Asian",
+          "iconUrl": "https://example.com/icons/asian.png"
+        }
+      ],
+      "rating": 4.8
+    },
+    {
+      "id": "rest_004",
+      "name": "Khmer Delight",
+      "description": "Authentic Cambodian dishes prepared by local chefs",
+      "location": {
+        "latitude": 11.562,
+        "longitude": 104.912,
+        "address": "Street 178, Sangkat Toul Svay Prey, Khan Chamkarmon, Phnom Penh"
+      },
+      "categorys": [
+        {
+          "id": "cat_003",
+          "name": "Asian",
+          "iconUrl": "https://example.com/icons/asian.png"
+        }
+      ],
+      "rating": 4.6
+    },
+    {
+      "id": "rest_005",
+      "name": "Sweet Dreams Bakery",
+      "description": "Artisan pastries, cakes, and desserts made fresh daily",
+      "location": {
+        "latitude": 11.548,
+        "longitude": 104.92,
+        "address": "Street 302, Sangkat Boeung Keng Kang, Khan Chamkarmon, Phnom Penh"
+      },
+      "categorys": [
+        {
+          "id": "cat_004",
+          "name": "Desserts",
+          "iconUrl": "https://example.com/icons/dessert.png"
+        }
+      ],
+      "rating": 4.9
+    },
+    {
+      "id": "rest_006",
+      "name": "Thai Spice Garden",
+      "description": "Authentic Thai flavors with adjustable spice levels",
+      "location": {
+        "latitude": 11.554,
+        "longitude": 104.931,
+        "address": "Street 214, Sangkat Toul Tom Poung, Khan Chamkarmon, Phnom Penh"
+      },
+      "categorys": [
+        {
+          "id": "cat_003",
+          "name": "Asian",
+          "iconUrl": "https://example.com/icons/asian.png"
+        }
+      ],
+      "rating": 4.4
+    },
+    {
+      "id": "rest_007",
+      "name": "The Coffee Bean",
+      "description": "Premium coffee and light snacks in a cozy atmosphere",
+      "location": {
+        "latitude": 11.56,
+        "longitude": 104.925,
+        "address": "Street 240, Sangkat Chak Tomuk, Khan Daun Penh, Phnom Penh"
+      },
+      "categorys": [
+        {
+          "id": "cat_005",
+          "name": "Beverages",
+          "iconUrl": "https://example.com/icons/beverage.png"
+        }
+      ],
+      "rating": 4.6
+    },
+    {
+      "id": "rest_008",
+      "name": "Taco Fiesta",
+      "description": "Mexican street food with authentic recipes",
+      "location": {
+        "latitude": 11.547,
+        "longitude": 104.929,
+        "address": "Street 155, Sangkat Toul Svay Prey, Khan Chamkarmon, Phnom Penh"
+      },
+      "categorys": [
+        {
+          "id": "cat_003",
+          "name": "Asian",
+          "iconUrl": "https://example.com/icons/asian.png"
+        }
+      ],
+      "rating": 4.3
+    },
+    {
+      "id": "rest_009",
+      "name": "Sushi Master",
+      "description": "Fresh sushi and Japanese cuisine by experienced chefs",
+      "location": {
+        "latitude": 11.565,
+        "longitude": 104.918,
+        "address": "Street 360, Sangkat Boeung Keng Kang, Khan Chamkarmon, Phnom Penh"
+      },
+      "categorys": [
+        {
+          "id": "cat_003",
+          "name": "Asian",
+          "iconUrl": "https://example.com/icons/asian.png"
+        }
+      ],
+      "rating": 4.7
+    },
+    {
+      "id": "rest_010",
+      "name": "BBQ Kingdom",
+      "description": "Korean BBQ and grilled specialties",
+      "location": {
+        "latitude": 11.552,
+        "longitude": 104.915,
+        "address": "Street 271, Sangkat Toul Tom Poung, Khan Chamkarmon, Phnom Penh"
+      },
+      "categorys": [
+        {
+          "id": "cat_003",
+          "name": "Asian",
+          "iconUrl": "https://example.com/icons/asian.png"
+        }
+      ],
+      "rating": 4.5
+    }
+  ]
+}
