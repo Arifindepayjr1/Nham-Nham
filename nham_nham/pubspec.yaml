@@ -11,6 +11,8 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
   logger: ^2.6.2
+  flutter_svg: ^2.2.3
+  geocoding: ^4.0.0
 
 dev_dependencies:
   flutter_test:
