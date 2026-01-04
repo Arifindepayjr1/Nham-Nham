@@ -24,3 +24,6 @@ flutter:
   assets:
     - lib/data/datasources/mocks/
     - assets/icons/
+    - assets/images/
+    - assets/restaurants/
+    - assets/foods/
