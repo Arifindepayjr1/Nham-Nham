@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nham_nham/data/datasources/local/user_local.dart';
 import 'package:nham_nham/data/repositories/user_repository.dart';
+import 'package:nham_nham/models/cart.dart';
 import 'package:nham_nham/services/cart.service.dart';
 import 'package:nham_nham/services/user.service.dart';
 import 'package:nham_nham/widgets/previous_page_icon.widget.dart';
@@ -28,10 +29,12 @@ class _CartScreenState extends State<CartScreen> {
     ),
   );
 
-    void _updateCart() {
+  void _updateCart() {
     setState(() {
     });
   }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -72,6 +75,7 @@ class _CartScreenState extends State<CartScreen> {
                   ),
                   PlaceOrderCard(
                     totalPrice: _cartService.currentTotalPrice(),
+                    
                   ),
                 ],
               ),

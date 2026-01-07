@@ -6,9 +6,9 @@
     "password": "hashed_password_123",
     "phoneNumber": "+85593569289",
     "location": {
-      "latitude": 11.5449,
-      "longitude": 104.8922,
-      "address": "Street 240, Sangkat Chak Tomuk, Khan Daun Penh, Phnom Penh"
+      "latitude": 11.654289,
+      "longitude": 104.908848,
+      "address": "2nd Bridge Prek Leap, National Road Number 6, Phnom Penh, 12252"
     }
   }
 }

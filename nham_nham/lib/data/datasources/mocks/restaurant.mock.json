@@ -13,15 +13,18 @@
         {
           "id": "cat_001",
           "name": "Pizza",
-          "iconUrl": "https://example.com/icons/pizza.png"
+          "iconUrl": "assets/category/pizza.png"
         },
         {
           "id": "cat_004",
           "name": "Desserts",
-          "iconUrl": "https://example.com/icons/dessert.png"
+          "iconUrl": "assets/category/dessert.png"
         }
       ],
-      "rating": 4.7
+      "rating": 4.7,
+      "bannerUrl": "assets/restaurants/restaurants_banner_1.png",
+      "iconUrl": "assets/restaurants/restaurants_icon/restaurants_icon_1.png",
+      "coverUrl": "assets/restaurants/restaurants_cover/restaurants_cover_1.png"
     },
     {
       "id": "rest_002",
@@ -36,14 +39,17 @@
         {
           "id": "cat_002",
           "name": "Burgers",
-          "iconUrl": "https://example.com/icons/burger.png"
+          "iconUrl": "assets/category/burger.png"
         }
       ],
-      "rating": 4.5
+      "rating": 4.5,
+      "bannerUrl": "assets/restaurants/restaurants_banner_2.png",
+      "iconUrl": "assets/restaurants/restaurants_icon/restaurants_icon_2.png",
+      "coverUrl": "assets/restaurants/restaurants_cover/restaurants_cover_2.png"
     },
     {
       "id": "rest_003",
-      "name": "Pho Kitchen",
+      "name": "Weekend Food",
       "description": "Traditional Vietnamese cuisine with modern twist",
       "location": {
         "latitude": 11.5501,
@@ -53,11 +59,14 @@
       "categorys": [
         {
           "id": "cat_003",
-          "name": "Asian",
-          "iconUrl": "https://example.com/icons/asian.png"
+          "name": "Khmer Foods",
+          "iconUrl": "assets/category/khmer.png"
         }
       ],
-      "rating": 4.8
+      "rating": 4.8,
+      "bannerUrl": "assets/restaurants/restaurants_banner_3.png",
+      "iconUrl": "assets/restaurants/restaurants_icon/restaurants_icon_3.png",
+      "coverUrl": "assets/restaurants/restaurants_cover/restaurants_cover_3.png"
     },
     {
       "id": "rest_004",
@@ -72,10 +81,13 @@
         {
           "id": "cat_003",
           "name": "Asian",
-          "iconUrl": "https://example.com/icons/asian.png"
+          "iconUrl": "assets/category/khmer.png"
         }
       ],
-      "rating": 4.6
+      "rating": 4.6,
+      "bannerUrl": "assets/restaurants/restaurants_banner_4.png",
+      "iconUrl": "assets/restaurants/restaurants_icon/restaurants_icon_4.png",
+      "coverUrl": "assets/restaurants/restaurants_cover/restaurants_cover_4.png"
     },
     {
       "id": "rest_005",
@@ -90,15 +102,18 @@
         {
           "id": "cat_004",
           "name": "Desserts",
-          "iconUrl": "https://example.com/icons/dessert.png"
+          "iconUrl": "assets/category/dessert.png"
         }
       ],
-      "rating": 4.9
+      "rating": 4.9,
+      "bannerUrl": "assets/restaurants/restaurants_banner_5.png",
+      "iconUrl": "assets/restaurants/restaurants_icon/restaurants_icon_5.png",
+      "coverUrl": "assets/restaurants/restaurants_cover/restaurants_cover_5.png"
     },
     {
       "id": "rest_006",
-      "name": "Thai Spice Garden",
-      "description": "Authentic Thai flavors with adjustable spice levels",
+      "name": "Spice Garden",
+      "description": "Authentic flavors with adjustable spice levels",
       "location": {
         "latitude": 11.554,
         "longitude": 104.931,
@@ -107,11 +122,14 @@
       "categorys": [
         {
           "id": "cat_003",
-          "name": "Asian",
-          "iconUrl": "https://example.com/icons/asian.png"
+          "name": "Khmer Foods",
+          "iconUrl": "assets/category/khmer.png"
         }
       ],
-      "rating": 4.4
+      "rating": 4.4,
+      "bannerUrl": "assets/restaurants/restaurants_banner_6.png",
+      "iconUrl": "assets/restaurants/restaurants_icon/restaurants_icon_6.png",
+      "coverUrl": "assets/restaurants/restaurants_cover/restaurants_cover_6.png"
     },
     {
       "id": "rest_007",
@@ -126,64 +144,13 @@
         {
           "id": "cat_005",
           "name": "Beverages",
-          "iconUrl": "https://example.com/icons/beverage.png"
+          "iconUrl": "assets/category/beverage.png"
         }
       ],
-      "rating": 4.6
-    },
-    {
-      "id": "rest_008",
-      "name": "Taco Fiesta",
-      "description": "Mexican street food with authentic recipes",
-      "location": {
-        "latitude": 11.547,
-        "longitude": 104.929,
-        "address": "Street 155, Sangkat Toul Svay Prey, Khan Chamkarmon, Phnom Penh"
-      },
-      "categorys": [
-        {
-          "id": "cat_003",
-          "name": "Asian",
-          "iconUrl": "https://example.com/icons/asian.png"
-        }
-      ],
-      "rating": 4.3
-    },
-    {
-      "id": "rest_009",
-      "name": "Sushi Master",
-      "description": "Fresh sushi and Japanese cuisine by experienced chefs",
-      "location": {
-        "latitude": 11.565,
-        "longitude": 104.918,
-        "address": "Street 360, Sangkat Boeung Keng Kang, Khan Chamkarmon, Phnom Penh"
-      },
-      "categorys": [
-        {
-          "id": "cat_003",
-          "name": "Asian",
-          "iconUrl": "https://example.com/icons/asian.png"
-        }
-      ],
-      "rating": 4.7
-    },
-    {
-      "id": "rest_010",
-      "name": "BBQ Kingdom",
-      "description": "Korean BBQ and grilled specialties",
-      "location": {
-        "latitude": 11.552,
-        "longitude": 104.915,
-        "address": "Street 271, Sangkat Toul Tom Poung, Khan Chamkarmon, Phnom Penh"
-      },
-      "categorys": [
-        {
-          "id": "cat_003",
-          "name": "Asian",
-          "iconUrl": "https://example.com/icons/asian.png"
-        }
-      ],
-      "rating": 4.5
+      "rating": 4.6,
+      "bannerUrl": "assets/restaurants/restaurants_banner_7.png",
+      "iconUrl": "assets/restaurants/restaurants_icon/restaurants_icon_7.png",
+      "coverUrl": "assets/restaurants/restaurants_cover/restaurants_cover_7.png"
     }
   ]
 }

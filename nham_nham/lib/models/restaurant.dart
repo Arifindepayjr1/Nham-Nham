@@ -8,6 +8,9 @@ class Restaurant {
   final Location location;
   final List<Category> categorys;
   final double rating;
+  final String bannerUrl;
+  final String iconUrl;
+  final String coverUrl;
 
   Restaurant({
     required this.id,
@@ -16,6 +19,9 @@ class Restaurant {
     required this.location,
     required this.categorys,
     required this.rating,
+    required this.bannerUrl,
+    required this.iconUrl,
+    required this.coverUrl,
   });
 
   Map<String, dynamic> toJson() {
@@ -26,9 +32,11 @@ class Restaurant {
       'location': location.toJson(),
       'categorys': categorys.map((cat) => cat.toJson()).toList(),
       'rating': rating,
+      'bannerUrl': bannerUrl,
+      'iconUrl': iconUrl,
+      'coverUrl': coverUrl,
     };
   }
-
 
   factory Restaurant.fromJson(Map<String, dynamic> json) {
     return Restaurant(
@@ -40,7 +48,9 @@ class Restaurant {
         .map((catJson) => Category.fromJson(catJson as Map<String, dynamic>))
         .toList(),
       rating: (json['rating'] as num).toDouble(),
+      bannerUrl: json['bannerUrl'],
+      iconUrl: json['iconUrl'],
+      coverUrl: json['coverUrl'],
     );
   }
-
 }
