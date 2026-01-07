@@ -12,4 +12,12 @@ class RestaurantRepository {
     await _localDatasources.loadRestaurants();
     return _localDatasources.restaurantData;
   }
+
+  Future<Restaurant> getRestaurantById(String id) async {
+    await _localDatasources.loadRestaurants();
+    return _localDatasources.restaurantData.firstWhere(
+      (res) => res.id == id,
+      orElse: () => throw Exception('Restaurant with id $id not found'),
+    );
+  }
 }
