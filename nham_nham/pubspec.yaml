@@ -13,6 +13,8 @@ dependencies:
   logger: ^2.6.2
   flutter_svg: ^2.2.3
   geocoding: ^4.0.0
+  google_maps_flutter: ^2.14.0
+  flutter_dotenv: ^6.0.0
 
 dev_dependencies:
   flutter_test:
@@ -23,7 +25,10 @@ flutter:
   uses-material-design: true
   assets:
     - lib/data/datasources/mocks/
-    - assets/icons/
-    - assets/images/
+    - assets/category/
+    - assets/discount_card/
     - assets/restaurants/
+    - assets/restaurants/restaurants_cover/
+    - assets/restaurants/restaurants_icon/
     - assets/foods/
+    - assets/feature/
