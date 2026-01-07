@@ -34,13 +34,13 @@ class HomeScreen extends StatelessWidget {
               RestaurantDiscountCard(
                 discountCardList: [
                   DiscountCard(
-                    cardImagePath: "assets/images/discount_card_1.png",
+                    cardImagePath: "assets/discount_card/discount_card_1.png",
                   ),
                   DiscountCard(
-                    cardImagePath: "assets/images/discount_card_2.png",
+                    cardImagePath: "assets/discount_card/discount_card_2.png",
                   ),
                   DiscountCard(
-                    cardImagePath: "assets/images/discount_card_3.png",
+                    cardImagePath: "assets/discount_card/discount_card_3.png",
                   ),
                 ],
               ),

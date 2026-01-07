@@ -34,7 +34,10 @@ class _RestaurantsListState extends State<RestaurantsList> {
       RestaurantService restaurantService = RestaurantService(
         restaurantRepository: restaurantRepository,
       );
-      restaurantList = await restaurantService.getAllRestaurant();
+      List<Restaurant> data = await restaurantService.getAllRestaurant();
+      setState(() {
+        restaurantList = data;
+      });
     } catch (error) {
       logger.e("Error Occur When Trying to Fetch Restaurants : $error");
     }
@@ -64,6 +67,7 @@ class _RestaurantsListState extends State<RestaurantsList> {
                     );
                   },
                   child: RestaurantsCard(
+                    restaurantImgPath: restaurantList[index].bannerUrl,
                     name: restaurantList[index].name,
                     category: restaurantList[index].categorys,
                     rating: restaurantList[index].rating,
