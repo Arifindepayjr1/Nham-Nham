@@ -29,10 +29,10 @@ class SelectedAddOn {
 class CartItem {
   final String foodId;
   final double price;
-  final int quantity;
+  int quantity;
   final List<SelectedAddOn> selectedAddOns;
 
-  const CartItem({
+   CartItem({
     required this.foodId,
     required this.price,
     required this.quantity,

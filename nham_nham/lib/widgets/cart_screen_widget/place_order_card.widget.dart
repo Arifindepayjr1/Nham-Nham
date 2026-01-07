@@ -1,10 +1,13 @@
 import "package:flutter/material.dart";
-
+import "package:nham_nham/models/cart.dart";
+import "package:nham_nham/screens/order_screen.dart";
 class PlaceOrderCard extends StatelessWidget {
   final double totalPrice;
+  final Cart cart;
 
   const PlaceOrderCard({
     required this.totalPrice,
+    required this.cart,
     super.key,
   });
 
@@ -63,15 +66,23 @@ class PlaceOrderCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(12),
                     ),
                   ),
-                  onPressed: () {
-
-                  },
-                  child: const Text(
-                    "Place Order",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                  onPressed: () {},
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) {
+                          return OrderScreen();
+                        }),
+                      );
+                    },
+                    child: const Text(
+                      "Place Order",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),

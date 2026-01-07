@@ -3,27 +3,27 @@
     {
       "id": "cat_001",
       "name": "Pizza",
-      "iconUrl": "https://example.com/icons/pizza.png"
+      "iconUrl": "assets/category/pizza.png"
     },
     {
       "id": "cat_002",
       "name": "Burgers",
-      "iconUrl": "https://example.com/icons/burger.png"
+      "iconUrl": "assets/category/burger.png"
     },
     {
       "id": "cat_003",
-      "name": "Asian",
-      "iconUrl": "https://example.com/icons/asian.png"
+      "name": "Khmer Foods",
+      "iconUrl": "assets/category/khmer.png"
     },
     {
       "id": "cat_004",
       "name": "Desserts",
-      "iconUrl": "https://example.com/icons/dessert.png"
+      "iconUrl": "assets/category/desserts.png"
     },
     {
       "id": "cat_005",
       "name": "Beverages",
-      "iconUrl": "https://example.com/icons/beverage.png"
+      "iconUrl": "assets/category/beverages.png"
     }
   ]
 }
