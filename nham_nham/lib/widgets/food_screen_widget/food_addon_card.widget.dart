@@ -10,14 +10,19 @@ class FoodAddonCard extends StatefulWidget {
   final String optionId;
   final String name;
   final double price;
+  final VoidCallback triggerSetState;
+  Map? existing;
 
-  const FoodAddonCard({
+  FoodAddonCard({
+    required this.triggerSetState,
     required this.foodId,
     required this.optionId,
     required this.name,
     required this.price,
+    this.existing,
     super.key,
   });
+  
   @override
   State<FoodAddonCard> createState() {
     return _FoodAddonCardState();
@@ -25,7 +30,10 @@ class FoodAddonCard extends StatefulWidget {
 }
 
 class _FoodAddonCardState extends State<FoodAddonCard> {
-  CartService? _cartService;
+  late final CartService _cartService;
+
+  bool get isEditingExisting =>
+      widget.existing != null && widget.existing!.isNotEmpty;
 
   @override
   void initState() {
@@ -35,34 +43,70 @@ class _FoodAddonCardState extends State<FoodAddonCard> {
       userLocalDatasources: userLocalDatasources,
     );
     UserService userService = UserService(userRepository: userRepository);
-    CartService cartService = CartService(userService: userService);
-    _cartService = cartService;
+    _cartService = CartService(userService: userService);
+  }
+
+  void _toggleAddOn() {
+    final isCurrentlySelected = _checkSelectAddOn(widget.optionId);
+    
+    if (isCurrentlySelected) {
+      _removeSelectAddOn(widget.optionId);
+    } else {
+      _addSelectAddOn();
+    }
+  }
+
+  void _addSelectAddOn() {
+    SelectedAddOn selectedAddOn = SelectedAddOn(
+      optionId: widget.optionId,
+      name: widget.name,
+      price: widget.price,
+    );
+
+    if (isEditingExisting) {
+
+      final index = widget.existing!["index"];
+      _cartService.addAddOnToCartItem(index, selectedAddOn);
+    } else {
+      _cartService.addSelectedAddOn(selectedAddOn);
+    }
+
+
+    setState(() {});
+    widget.triggerSetState();
   }
 
   bool _checkSelectAddOn(String optionId) {
-    bool inTemp = _cartService!.userSelectedAddOn.any((item) {
-      return item.optionId == optionId;
-    });
+    if (isEditingExisting) {
+      return _cartService.checkCurrentAddOnCartItem(
+        widget.existing!["index"],
+        optionId,
+      );
+    }
 
-    if (inTemp) return true;
-
-    return false;
+    return _cartService.userSelectedAddOn.any(
+      (item) => item.optionId == optionId,
+    );
   }
 
   void _removeSelectAddOn(String optionId) {
-    setState(() {
-      bool inTemp = _cartService!.userSelectedAddOn.any((item) {
-        return item.optionId == optionId;
-      });
-
-      if (inTemp) {
-        _cartService!.removeSelectedAdd(optionId);
-      }
-    });
+    if (isEditingExisting) {
+      _cartService.removeCurrentAddOnCartItem(
+        widget.existing!["index"],
+        optionId,
+      );
+    } else {
+      _cartService.removeSelectedAdd(optionId);
+    }
+    
+    setState(() {});
+    widget.triggerSetState();
   }
 
   @override
   Widget build(BuildContext context) {
+    final isSelected = _checkSelectAddOn(widget.optionId);
+    
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -93,21 +137,8 @@ class _FoodAddonCardState extends State<FoodAddonCard> {
                 color: Colors.white,
               ),
               child: IconButton(
-                onPressed: _checkSelectAddOn(widget.optionId)
-                    ? () {
-                        _removeSelectAddOn(widget.optionId);
-                      }
-                    : () {
-                        SelectedAddOn selectedAddOn = SelectedAddOn(
-                          optionId: widget.optionId,
-                          name: widget.name,
-                          price: widget.price,
-                        );
-                        setState(() {
-                          _cartService!.addSelectedAddOn(selectedAddOn);
-                        });
-                      },
-                icon: _checkSelectAddOn(widget.optionId)
+                onPressed: _toggleAddOn,
+                icon: isSelected
                     ? Icon(Icons.check, size: 16, color: Colors.red)
                     : Icon(Icons.add, size: 16, color: Colors.red),
               ),

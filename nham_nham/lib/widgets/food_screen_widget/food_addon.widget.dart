@@ -11,8 +11,10 @@ var logger = Logger();
 
 class FoodAddOn extends StatefulWidget {
   final String foodId;
+  final VoidCallback triggerSetState;
+  final Map? existing;
 
-  const FoodAddOn({super.key, required this.foodId});
+  const FoodAddOn({required this.triggerSetState , super.key, required this.foodId, this.existing});
 
   @override
   State<FoodAddOn> createState() {
@@ -27,6 +29,11 @@ class _FoodAddOnState extends State<FoodAddOn> {
   void initState() {
     super.initState();
     _getFoodAddOn(widget.foodId);
+  }
+
+   void _handleAddOnChange() {
+    setState(() {});
+    widget.triggerSetState();
   }
 
   Future<void> _getFoodAddOn(String foodId) async {
@@ -77,6 +84,8 @@ class _FoodAddOnState extends State<FoodAddOn> {
               itemCount: foodAddOnGroup![index0].options.length,
               itemBuilder: (context, index) {
                 return FoodAddonCard(
+                  triggerSetState: _handleAddOnChange,
+                  existing: widget.existing,
                   foodId: widget.foodId,
                   optionId: foodAddOnGroup![index0].options[index].id,
                   name: foodAddOnGroup![index0].options[index].name,
