@@ -15,7 +15,9 @@ var logger = Logger();
 class FoodDetailAddToCart extends StatefulWidget {
   final String foodId;
   final VoidCallback clickToAddToCart;
-  const FoodDetailAddToCart({
+  Map? existing;
+  FoodDetailAddToCart({
+    this.existing,
     required this.foodId,
     super.key,
     required this.clickToAddToCart,
@@ -28,6 +30,9 @@ class FoodDetailAddToCart extends StatefulWidget {
 }
 
 class _FoodDetailAddToCartState extends State<FoodDetailAddToCart> {
+  bool get isEditingExisting =>
+      widget.existing != null && widget.existing!.isNotEmpty;
+
   int quantity = 1;
   Food? food;
   CartService? _cartService;
@@ -36,14 +41,36 @@ class _FoodDetailAddToCartState extends State<FoodDetailAddToCart> {
     setState(() {
       quantity++;
     });
+
+    if (isEditingExisting) {
+      final index = widget.existing!["index"];
+      _cartService!.userCartItem[index].quantity = quantity;
+      widget.clickToAddToCart();
+    }
   }
 
   void _decrementQuantity() {
-    setState(() {
-      if (quantity > 1) {
+    if (!isEditingExisting) {
+      setState(() {
+        if (quantity > 1) quantity--;
+      });
+      return;
+    }
+
+    final index = widget.existing!["index"];
+
+    if (quantity <= 1) {
+      _cartService!.removeCartItemQuantityOne(index);
+      widget.clickToAddToCart();
+      Navigator.of(context).pop();
+    } else {
+      setState(() {
         quantity--;
-      }
-    });
+        _cartService!.userCartItem[index].quantity = quantity;
+      });
+
+      widget.clickToAddToCart();
+    }
   }
 
   @override
@@ -51,11 +78,18 @@ class _FoodDetailAddToCartState extends State<FoodDetailAddToCart> {
     super.initState();
     _getFoodDetail(widget.foodId);
     _initCartService();
+
+    if (isEditingExisting) {
+      final index = widget.existing!["index"];
+      quantity = _cartService!.userCartItem[index].quantity;
+    }
   }
 
   @override
   void dispose() {
-    _cartService!.clearSelectedAddOn();
+    if (!isEditingExisting) {
+      _cartService!.clearSelectedAddOn();
+    }
     super.dispose();
   }
 
@@ -73,6 +107,7 @@ class _FoodDetailAddToCartState extends State<FoodDetailAddToCart> {
 
   void _addToCart(int quantity, Food food) {
     _cartService!.addToCart(food, quantity);
+    widget.clickToAddToCart();
   }
 
   Future<void> _getFoodDetail(String foodId) async {
