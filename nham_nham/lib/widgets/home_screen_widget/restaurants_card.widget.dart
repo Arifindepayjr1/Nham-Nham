@@ -5,9 +5,10 @@ class RestaurantsCard extends StatelessWidget {
   final String name;
   final List<Category> category;
   final double rating;
-  final restaurantImgPath = "assets/images/restaurants.jpg";
+  final restaurantImgPath;
 
   const RestaurantsCard({
+    required this.restaurantImgPath,
     required this.name,
     required this.category,
     required this.rating,

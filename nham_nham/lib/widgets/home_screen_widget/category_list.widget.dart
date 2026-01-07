@@ -6,7 +6,7 @@ import "package:nham_nham/services/categories.service.dart";
 import "package:logger/logger.dart";
 import "package:nham_nham/widgets/home_screen_widget/category_card.widget.dart";
 
-enum CategoriesColor{
+enum CategoriesColor {
   pizza(Colors.red),
   burgers(Colors.blueGrey),
   khmer(Colors.blue),
@@ -38,21 +38,26 @@ class _CategoryCardState extends State<CategoryList> {
 
   @override
   Widget build(BuildContext context) {
-    return categoriesList.isEmpty ? Text("Categories is empty") : SizedBox(
-      height: 150,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: categoriesList.length,
-        itemBuilder: (context , index){
-          List categoriesColor = CategoriesColor.values;
-          return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: CategoryCard(color: categoriesColor[index].color, categoryName: categoriesList[index].name, iconUrl: categoriesList[index].iconUrl),
+    return categoriesList.isEmpty
+        ? Text("Categories is empty")
+        : SizedBox(
+            height: 150,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: categoriesList.length,
+              itemBuilder: (context, index) {
+                List categoriesColor = CategoriesColor.values;
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CategoryCard(
+                    color: categoriesColor[index].color,
+                    categoryName: categoriesList[index].name,
+                    iconUrl: categoriesList[index].iconUrl,
+                  ),
+                );
+              },
+            ),
           );
-        },
-      
-      ),
-    );
   }
 
   Future<void> _getListOfCategory() async {
@@ -65,7 +70,10 @@ class _CategoryCardState extends State<CategoryList> {
       CategoriesService categoriesService = CategoriesService(
         categoryRepository: categoryRepository,
       );
-      categoriesList = await categoriesService.loadCategory();
+      List<Category> data = await categoriesService.loadCategory();
+      setState(() {
+        categoriesList = data;
+      });
     } catch (error) {
       logger.e("Error Occur When Trying to Fetch Categories : $error");
     }

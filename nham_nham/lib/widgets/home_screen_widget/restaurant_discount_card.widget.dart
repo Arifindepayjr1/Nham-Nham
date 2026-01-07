@@ -22,7 +22,7 @@ class _RestaurantDiscountCardState extends State<RestaurantDiscountCard> {
   void initState() {
     super.initState();
 
-    _pageController = PageController(initialPage: 0, viewportFraction: 10);
+    _pageController = PageController(initialPage: 0, viewportFraction: 1);
 
     _timer = Timer.periodic(Duration(seconds: 5), (_) {
       if (_currentPage < widget.discountCardList.length - 1) {

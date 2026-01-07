@@ -17,7 +17,7 @@ class NotificationIcon extends StatelessWidget {
         ),
         child: Center(
           child: SvgPicture.asset(
-            "assets/icons/red_notification_icon.svg",
+            "assets/feature/red_notification_icon.svg",
             width: 18,
             height: 18,
           ),

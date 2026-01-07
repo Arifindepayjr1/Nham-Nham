@@ -17,7 +17,7 @@ class LocationIcon extends StatelessWidget {
         ),
         child: Center(
           child: Image.asset(
-            "assets/icons/location.png",
+            "assets/feature/location.png",
             width: 18,
             height: 18,
           ),
