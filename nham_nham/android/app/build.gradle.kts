@@ -16,7 +16,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
+        jvmTarget = "17"
     }
 
     defaultConfig {
@@ -29,9 +29,9 @@ android {
         versionCode = flutter.versionCode
         versionName = flutter.versionName
 
-        manifestPlaceholders = [
-            GOOGLE_MAPS_API_KEY: project.properties["GOOGLE_MAP_API_KEY"] ?: ""
-        ]
+        manifestPlaceholders += mapOf(
+            "GOOGLE_MAPS_API_KEY" to (project.properties["GOOGLE_MAPS_API_KEY"] ?: "")
+        )
     }
 
     buildTypes {

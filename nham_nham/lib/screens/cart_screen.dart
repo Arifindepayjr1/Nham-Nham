@@ -10,11 +10,12 @@ import 'package:nham_nham/widgets/cart_screen_widget/delivery_cart.widget_timer.
 import 'package:nham_nham/widgets/cart_screen_widget/cart_display.widget.dart';
 import 'package:nham_nham/widgets/cart_screen_widget/place_order_card.widget.dart';
 import 'package:nham_nham/widgets/cart_screen_widget/payment_selection.widget.dart';
+import 'package:nham_nham/models/user.dart';
 
 class CartScreen extends StatefulWidget {
   final VoidCallback? goToHomePage;
-
-  CartScreen({this.goToHomePage, super.key});
+  VoidCallback? onOrderPlaced;
+  CartScreen({this.goToHomePage, super.key, this.onOrderPlaced});
 
   @override
   State<CartScreen> createState() => _CartScreenState();
@@ -28,16 +29,39 @@ class _CartScreenState extends State<CartScreen> {
       ),
     ),
   );
+  User? user;
 
-  void _updateCart() {
+  @override
+  void initState() {
+    super.initState();
+    _getUserInfo();
+  }
+
+  Future<void> _getUserInfo() async {
+    User data = await _cartService.userService.getUserInfo();
     setState(() {
+      user = data;
     });
   }
 
+  void _updateCart() {
+    setState(() {});
+  }
 
+  Cart _getFinalCart() {
+    Cart cart = Cart(userId: user!.id, items: _cartService.userCartItem);
+    return cart;
+  }
 
   @override
   Widget build(BuildContext context) {
+
+    if(user == null){
+      return Center(
+        child: CircularProgressIndicator(),
+      );
+    }
+
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -52,9 +76,12 @@ class _CartScreenState extends State<CartScreen> {
           leading: PreviousPageIcon(goToHomePage: widget.goToHomePage),
         ),
         body: _cartService.userCartItem.isEmpty
-            ? Center(child: Text("Cart is Empty" , style: TextStyle(
-              color: Colors.black87, 
-            )),)
+            ? Center(
+                child: Text(
+                  "Cart is Empty",
+                  style: TextStyle(color: Colors.black87),
+                ),
+              )
             : Stack(
                 children: [
                   SingleChildScrollView(
@@ -74,8 +101,9 @@ class _CartScreenState extends State<CartScreen> {
                     ),
                   ),
                   PlaceOrderCard(
+                    onOrderPlaced: widget.onOrderPlaced,
+                    cart: _getFinalCart(),
                     totalPrice: _cartService.currentTotalPrice(),
-                    
                   ),
                 ],
               ),

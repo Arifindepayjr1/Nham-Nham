@@ -76,7 +76,7 @@
           "id": "group_003",
           "name": "Add-ons",
           "options": [
-            { "id": "addon_007", "name": "Bacon", "price": 2.0 },
+            { "id": "addon_007", "name": "Egg", "price": 2.0 },
             { "id": "addon_008", "name": "Fried Egg", "price": 1.5 },
             { "id": "addon_009", "name": "Extra Patty", "price": 3.5 }
           ]

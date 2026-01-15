@@ -194,8 +194,8 @@ class _FoodDetailAddToCartState extends State<FoodDetailAddToCart> {
                   ),
                   elevation: 0,
                 ),
-                child: const Text(
-                  'Add to Cart',
+                child: Text(
+                isEditingExisting ? "Update Cart" : "Add To Cart",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w700,

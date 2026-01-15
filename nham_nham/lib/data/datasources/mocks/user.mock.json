@@ -6,7 +6,7 @@
     "password": "hashed_password_123",
     "phoneNumber": "+85593569289",
     "location": {
-      "latitude": 11.654289,
+      "latitude": 111.654289,
       "longitude": 104.908848,
       "address": "2nd Bridge Prek Leap, National Road Number 6, Phnom Penh, 12252"
     }

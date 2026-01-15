@@ -2,6 +2,7 @@ import 'package:nham_nham/models/location.dart';
 import 'package:nham_nham/models/order_item.dart';
 
 enum OrderStatus { pending, confirmed, preparing, onTheWay, delivered }
+
 enum PaymentMethod { cash, creditCard }
 
 class Order {
@@ -15,7 +16,7 @@ class Order {
 
   final Location pickupLocation;
   final Location dropOffLocation;
-  final String? deliveryPersonId;
+  final String deliveryPersonId;
   final DateTime createdAt;
 
   final PaymentMethod paymentMethod;
@@ -31,7 +32,7 @@ class Order {
     required this.dropOffLocation,
     required this.deliveryPersonId,
     required this.createdAt,
-    required this.paymentMethod
+    required this.paymentMethod,
   });
 
   Map<String, dynamic> toJson() {
@@ -59,16 +60,37 @@ class Order {
           .map((item) => OrderItem.fromJson(item as Map<String, dynamic>))
           .toList(),
       totalAmount: (json['totalAmount'] as num).toDouble(),
-      status: OrderStatus.values.firstWhere(
-        (e) => e.name == json['status'],
+      status: OrderStatus.values.firstWhere((e) => e.name == json['status']),
+      pickupLocation: Location.fromJson(
+        json['pickupLocation'] as Map<String, dynamic>,
       ),
-      pickupLocation: Location.fromJson(json['pickupLocation'] as Map<String, dynamic>),
-      dropOffLocation: Location.fromJson(json['dropOffLocation'] as Map<String, dynamic>),
-      deliveryPersonId: json['deliveryPersonId'] as String?,
+      dropOffLocation: Location.fromJson(
+        json['dropOffLocation'] as Map<String, dynamic>,
+      ),
+      deliveryPersonId: json['deliveryPersonId'] as String,
       createdAt: DateTime.parse(json['createdAt'] as String),
       paymentMethod: PaymentMethod.values.firstWhere(
         (e) => e.name == json['paymentMethod'],
       ),
     );
+  }
+
+  @override
+  String toString() {
+    String itemsString = items.map((item) => '    - $item').join('\n');
+
+    return 'Order{\n'
+        '  id: $id,\n'
+        '  userId: $userId,\n'
+        '  restaurantId: $restaurantId,\n'
+        '  items (${items.length}):\n$itemsString\n'
+        '  totalAmount: \$${totalAmount.toStringAsFixed(2)},\n'
+        '  status: ${status.name},\n'
+        '  pickupLocation: ${pickupLocation.latitude} ${pickupLocation.longitude},\n'
+        '  dropOffLocation: ${dropOffLocation.latitude} ${dropOffLocation.longitude},\n'
+        '  deliveryPersonId: ${deliveryPersonId ?? 'Not assigned'},\n'
+        '  createdAt: ${createdAt.toLocal()},\n'
+        '  paymentMethod: ${paymentMethod.name}\n'
+        '}';
   }
 }

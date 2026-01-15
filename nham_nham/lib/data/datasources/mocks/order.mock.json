@@ -1,5 +1,5 @@
-{ 
-    "orders": [
+{
+  "orders": [
     {
       "id": "order_001",
       "userId": "user_001",
@@ -7,19 +7,17 @@
       "items": [
         {
           "foodId": "food_001",
-          "price": 12.99,
           "quantity": 2,
           "selectedAddOns": [
             {
               "optionId": "addon_001",
               "name": "Extra Cheese",
-              "price": 1.50
+              "price": 1.5
             }
           ]
         },
         {
           "foodId": "food_002",
-          "price": 14.99,
           "quantity": 1,
           "selectedAddOns": []
         }
@@ -47,19 +45,17 @@
       "items": [
         {
           "foodId": "food_005",
-          "price": 6.99,
           "quantity": 2,
           "selectedAddOns": [
             {
               "optionId": "addon_014",
               "name": "Extra Beef",
-              "price": 2.50
+              "price": 2.5
             }
           ]
         },
         {
           "foodId": "food_006",
-          "price": 4.99,
           "quantity": 1,
           "selectedAddOns": []
         }
@@ -68,7 +64,7 @@
       "status": "onTheWay",
       "pickupLocation": {
         "latitude": 11.5501,
-        "longitude": 104.9280,
+        "longitude": 104.928,
         "address": "Street 136, Sangkat Veal Vong, Khan 7 Makara, Phnom Penh"
       },
       "dropOffLocation": {
@@ -87,30 +83,28 @@
       "items": [
         {
           "foodId": "food_003",
-          "price": 8.99,
           "quantity": 3,
           "selectedAddOns": [
             {
               "optionId": "addon_007",
               "name": "Bacon",
-              "price": 2.00
+              "price": 2.0
             },
             {
               "optionId": "addon_010",
               "name": "French Fries",
-              "price": 2.50
+              "price": 2.5
             }
           ]
         },
         {
           "foodId": "food_004",
-          "price": 7.99,
           "quantity": 1,
           "selectedAddOns": [
             {
               "optionId": "addon_012",
               "name": "Cheese Slice",
-              "price": 1.00
+              "price": 1.0
             }
           ]
         }
@@ -138,34 +132,32 @@
       "items": [
         {
           "foodId": "food_007",
-          "price": 7.50,
           "quantity": 1,
           "selectedAddOns": [
             {
               "optionId": "addon_016",
               "name": "Steamed Rice",
-              "price": 1.50
+              "price": 1.5
             }
           ]
         },
         {
           "foodId": "food_008",
-          "price": 8.50,
           "quantity": 1,
           "selectedAddOns": [
             {
               "optionId": "addon_018",
               "name": "Fried Rice",
-              "price": 2.50
+              "price": 2.5
             }
           ]
         }
       ],
-      "totalAmount": 20.00,
+      "totalAmount": 20.0,
       "status": "confirmed",
       "pickupLocation": {
-        "latitude": 11.5620,
-        "longitude": 104.9120,
+        "latitude": 11.562,
+        "longitude": 104.912,
         "address": "Street 178, Sangkat Toul Svay Prey, Khan Chamkarmon, Phnom Penh"
       },
       "dropOffLocation": {
@@ -184,24 +176,22 @@
       "items": [
         {
           "foodId": "food_009",
-          "price": 5.99,
           "quantity": 2,
           "selectedAddOns": [
             {
               "optionId": "addon_019",
               "name": "Extra Ice Cream Scoop",
-              "price": 2.00
+              "price": 2.0
             },
             {
               "optionId": "addon_020",
               "name": "Whipped Cream",
-              "price": 1.00
+              "price": 1.0
             }
           ]
         },
         {
           "foodId": "food_010",
-          "price": 6.50,
           "quantity": 1,
           "selectedAddOns": []
         }
@@ -209,8 +199,8 @@
       "totalAmount": 24.48,
       "status": "delivered",
       "pickupLocation": {
-        "latitude": 11.5480,
-        "longitude": 104.9200,
+        "latitude": 11.548,
+        "longitude": 104.92,
         "address": "Street 302, Sangkat Boeung Keng Kang, Khan Chamkarmon, Phnom Penh"
       },
       "dropOffLocation": {
@@ -224,95 +214,80 @@
     },
     {
       "id": "order_006",
-      "userId": "user_001",
-      "restaurantId": "rest_009",
+      "userId": "user_002",
+      "restaurantId": "rest_001",
       "items": [
         {
-          "foodId": "food_016",
-          "price": 12.99,
+          "foodId": "food_001",
           "quantity": 1,
           "selectedAddOns": [
             {
-              "optionId": "addon_035",
-              "name": "Miso Soup",
-              "price": 2.50
+              "optionId": "addon_002",
+              "name": "Mushrooms",
+              "price": 1.0
             },
             {
-              "optionId": "addon_036",
-              "name": "Edamame",
-              "price": 3.00
+              "optionId": "addon_004",
+              "name": "Large (+12 inch)",
+              "price": 3.0
             }
           ]
-        },
-        {
-          "foodId": "food_017",
-          "price": 8.99,
-          "quantity": 2,
-          "selectedAddOns": []
         }
       ],
-      "totalAmount": 36.47,
+      "totalAmount": 16.99,
       "status": "delivered",
       "pickupLocation": {
-        "latitude": 11.5650,
-        "longitude": 104.9180,
-        "address": "Street 360, Sangkat Boeung Keng Kang, Khan Chamkarmon, Phnom Penh"
+        "latitude": 11.5564,
+        "longitude": 104.9282,
+        "address": "Street 51, Sangkat Boeung Keng Kang, Khan Chamkarmon, Phnom Penh"
       },
       "dropOffLocation": {
-        "latitude": 11.5449,
-        "longitude": 104.8922,
-        "address": "Street 240, Sangkat Chak Tomuk, Khan Daun Penh, Phnom Penh"
+        "latitude": 11.556,
+        "longitude": 104.935,
+        "address": "Street 214, Sangkat Toul Tom Poung, Khan Chamkarmon, Phnom Penh"
       },
-      "deliveryPersonId": "driver_004",
+      "deliveryPersonId": "driver_001",
       "createdAt": "2024-12-28T20:00:00Z",
       "paymentMethod": "creditCard"
     },
     {
       "id": "order_007",
-      "userId": "user_001",
-      "restaurantId": "rest_007",
+      "userId": "user_002",
+      "restaurantId": "rest_002",
       "items": [
         {
-          "foodId": "food_013",
-          "price": 3.50,
-          "quantity": 3,
+          "foodId": "food_003",
+          "quantity": 1,
           "selectedAddOns": [
             {
-              "optionId": "addon_029",
-              "name": "Extra Shot",
-              "price": 1.50
+              "optionId": "addon_008",
+              "name": "Fried Egg",
+              "price": 1.5
             },
             {
-              "optionId": "addon_030",
-              "name": "Vanilla Syrup",
-              "price": 0.50
+              "optionId": "addon_010",
+              "name": "French Fries",
+              "price": 2.5
             }
           ]
         },
         {
-          "foodId": "food_014",
-          "price": 4.00,
+          "foodId": "food_004",
           "quantity": 2,
-          "selectedAddOns": [
-            {
-              "optionId": "addon_032",
-              "name": "Almond Milk",
-              "price": 0.75
-            }
-          ]
+          "selectedAddOns": []
         }
       ],
-      "totalAmount": 26.00,
+      "totalAmount": 37.96,
       "status": "pending",
       "pickupLocation": {
-        "latitude": 11.5600,
-        "longitude": 104.9250,
-        "address": "Street 240, Sangkat Chak Tomuk, Khan Daun Penh, Phnom Penh"
+        "latitude": 11.5588,
+        "longitude": 104.9178,
+        "address": "Street 308, Sangkat Boeung Keng Kang, Khan Chamkarmon, Phnom Penh"
       },
       "dropOffLocation": {
-        "latitude": 11.5449,
-        "longitude": 104.8922,
-        "address": "Street 240, Sangkat Chak Tomuk, Khan Daun Penh, Phnom Penh"
+        "latitude": 11.556,
+        "longitude": 104.935,
+        "address": "Street 214, Sangkat Toul Tom Poung, Khan Chamkarmon, Phnom Penh"
       },
       "deliveryPersonId": null,
       "createdAt": "2024-12-31T14:30:00Z",
@@ -320,133 +295,105 @@
     },
     {
       "id": "order_008",
-      "userId": "user_001",
-      "restaurantId": "rest_010",
+      "userId": "user_003",
+      "restaurantId": "rest_003",
       "items": [
         {
-          "foodId": "food_018",
-          "price": 15.99,
-          "quantity": 1,
+          "foodId": "food_005",
+          "quantity": 3,
           "selectedAddOns": [
             {
-              "optionId": "addon_037",
-              "name": "Kimchi",
-              "price": 2.00
-            },
-            {
-              "optionId": "addon_038",
-              "name": "Steamed Rice",
-              "price": 1.50
+              "optionId": "addon_015",
+              "name": "Extra Noodles",
+              "price": 1.5
             }
           ]
         },
         {
-          "foodId": "food_019",
-          "price": 10.99,
-          "quantity": 1,
-          "selectedAddOns": [
-            {
-              "optionId": "addon_040",
-              "name": "Beef",
-              "price": 3.00
-            }
-          ]
-        }
-      ],
-      "totalAmount": 33.48,
-      "status": "delivered",
-      "pickupLocation": {
-        "latitude": 11.5520,
-        "longitude": 104.9150,
-        "address": "Street 271, Sangkat Toul Tom Poung, Khan Chamkarmon, Phnom Penh"
-      },
-      "dropOffLocation": {
-        "latitude": 11.5449,
-        "longitude": 104.8922,
-        "address": "Street 240, Sangkat Chak Tomuk, Khan Daun Penh, Phnom Penh"
-      },
-      "deliveryPersonId": "driver_006",
-      "createdAt": "2024-12-27T17:45:00Z",
-      "paymentMethod": "creditCard"
-    },
-    {
-      "id": "order_009",
-      "userId": "user_001",
-      "restaurantId": "rest_006",
-      "items": [
-        {
-          "foodId": "food_011",
-          "price": 7.99,
+          "foodId": "food_006",
           "quantity": 2,
-          "selectedAddOns": [
-            {
-              "optionId": "addon_021",
-              "name": "Extra Shrimp",
-              "price": 3.00
-            }
-          ]
-        },
-        {
-          "foodId": "food_012",
-          "price": 8.50,
-          "quantity": 1,
-          "selectedAddOns": [
-            {
-              "optionId": "addon_026",
-              "name": "Spicy",
-              "price": 0.00
-            }
-          ]
+          "selectedAddOns": []
         }
       ],
-      "totalAmount": 30.48,
+      "totalAmount": 39.44,
       "status": "onTheWay",
       "pickupLocation": {
-        "latitude": 11.5540,
-        "longitude": 104.9310,
-        "address": "Street 214, Sangkat Toul Tom Poung, Khan Chamkarmon, Phnom Penh"
+        "latitude": 11.5501,
+        "longitude": 104.928,
+        "address": "Street 136, Sangkat Veal Vong, Khan 7 Makara, Phnom Penh"
       },
       "dropOffLocation": {
-        "latitude": 11.5449,
-        "longitude": 104.8922,
+        "latitude": 11.56,
+        "longitude": 104.925,
         "address": "Street 240, Sangkat Chak Tomuk, Khan Daun Penh, Phnom Penh"
       },
-      "deliveryPersonId": "driver_007",
+      "deliveryPersonId": "driver_003",
       "createdAt": "2024-12-31T13:00:00Z",
       "paymentMethod": "cash"
     },
     {
-      "id": "order_010",
-      "userId": "user_001",
-      "restaurantId": "rest_001",
+      "id": "order_009",
+      "userId": "user_003",
+      "restaurantId": "rest_004",
       "items": [
         {
-          "foodId": "food_020",
-          "price": 15.99,
-          "quantity": 1,
+          "foodId": "food_007",
+          "quantity": 2,
           "selectedAddOns": [
             {
-              "optionId": "addon_043",
-              "name": "Truffle Oil",
-              "price": 2.50
+              "optionId": "addon_017",
+              "name": "Baguette",
+              "price": 1.0
             }
           ]
         }
       ],
-      "totalAmount": 18.49,
+      "totalAmount": 17.0,
       "status": "preparing",
       "pickupLocation": {
-        "latitude": 11.5564,
-        "longitude": 104.9282,
-        "address": "Street 51, Sangkat Boeung Keng Kang, Khan Chamkarmon, Phnom Penh"
+        "latitude": 11.562,
+        "longitude": 104.912,
+        "address": "Street 178, Sangkat Toul Svay Prey, Khan Chamkarmon, Phnom Penh"
       },
       "dropOffLocation": {
-        "latitude": 11.5449,
-        "longitude": 104.8922,
+        "latitude": 11.56,
+        "longitude": 104.925,
         "address": "Street 240, Sangkat Chak Tomuk, Khan Daun Penh, Phnom Penh"
       },
       "deliveryPersonId": null,
       "createdAt": "2024-12-31T14:20:00Z",
+      "paymentMethod": "creditCard"
+    },
+    {
+      "id": "order_010",
+      "userId": "user_004",
+      "restaurantId": "rest_005",
+      "items": [
+        {
+          "foodId": "food_009",
+          "quantity": 1,
+          "selectedAddOns": []
+        },
+        {
+          "foodId": "food_010",
+          "quantity": 1,
+          "selectedAddOns": []
+        }
+      ],
+      "totalAmount": 12.49,
+      "status": "confirmed",
+      "pickupLocation": {
+        "latitude": 11.548,
+        "longitude": 104.92,
+        "address": "Street 302, Sangkat Boeung Keng Kang, Khan Chamkarmon, Phnom Penh"
+      },
+      "dropOffLocation": {
+        "latitude": 11.554,
+        "longitude": 104.931,
+        "address": "Street 214, Sangkat Toul Tom Poung, Khan Chamkarmon, Phnom Penh"
+      },
+      "deliveryPersonId": "driver_002",
+      "createdAt": "2024-12-27T17:45:00Z",
       "paymentMethod": "creditCard"
     }
   ]

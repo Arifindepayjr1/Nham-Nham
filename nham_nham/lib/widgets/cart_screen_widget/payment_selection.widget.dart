@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nham_nham/services/cart.service.dart';
+import "package:nham_nham/models/order.dart";
 
 class PaymentSelection extends StatefulWidget {
   final CartService cartService;
@@ -17,7 +18,7 @@ class _PaymentSelectionState extends State<PaymentSelection> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      margin: const EdgeInsets.all(16.0), 
+      margin: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(25),

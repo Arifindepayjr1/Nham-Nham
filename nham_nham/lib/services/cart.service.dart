@@ -2,10 +2,9 @@ import 'package:nham_nham/models/cart_item.dart';
 import 'package:nham_nham/models/food.dart';
 import 'package:nham_nham/services/user.service.dart';
 import 'package:logger/logger.dart';
+import 'package:nham_nham/models/order.dart';
 
 var logger = Logger();
-
-enum PaymentMethod { cash, creditCard }
 
 class CartService {
   final UserService userService;
@@ -21,6 +20,7 @@ class CartService {
     _instance ??= CartService._internal(userService: userService);
     return _instance!;
   }
+
 
   List<CartItem> get userCartItem => _userCartItem;
   List<SelectedAddOn> get userSelectedAddOn => _selectedAddOn;
@@ -64,8 +64,8 @@ class CartService {
 
   double currentTotalPriceForEachCart({required CartItem cartItem}) {
     double total = cartItem.price * cartItem.quantity;
-    for (int i = 0; i < cartItem.selectedAddOns.length; i++) {
-      total = total + cartItem.selectedAddOns[i].price;
+    for (var addon in cartItem.selectedAddOns) {
+      total += addon.price * cartItem.quantity;
     }
     return total;
   }

@@ -44,7 +44,7 @@ class _FoodDetailsScreenState extends State<FoodDetailScreen> {
           children: [
             SingleChildScrollView(
               padding: const EdgeInsets.only(
-                bottom: 100,
+                bottom: 200,
               ), 
               child: Column(
                 children: [

@@ -19,15 +19,26 @@ class _MainScreenState extends State<MainScreen> {
   Widget _getCurrentScreen() {
     switch (_currentIndex) {
       case 0:
-        return HomeScreen();
+        return HomeScreen(onOrderPlaced: _handleOrderPlaced);
       case 1:
-        return CartScreen(goToHomePage: _onTappedDefaultScreen,);
+        return CartScreen(
+          goToHomePage: _onTappedDefaultScreen,
+          onOrderPlaced: _handleOrderPlaced,
+        );
       case 2:
-        return OrderScreen(gotoHome: _onTappedDefaultScreen,);
+        return OrderScreen(
+          onOrderPlaced: _handleOrderPlaced,
+          gotoHome: _onTappedDefaultScreen,
+          setScreenIndex: _onTappedScreen,
+        );
       case 3:
         return ProfileScreen();
     }
-    return HomeScreen();
+    return HomeScreen(onOrderPlaced: _handleOrderPlaced);
+  }
+
+  void _handleOrderPlaced() {
+    setState(() {});
   }
 
   void _onTappedScreen(int index) {
@@ -37,6 +48,7 @@ class _MainScreenState extends State<MainScreen> {
   }
 
   void _onTappedDefaultScreen() {
+    print("von");
     setState(() {
       _currentIndex = 0;
     });

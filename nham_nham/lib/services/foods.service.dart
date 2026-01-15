@@ -25,4 +25,9 @@ class FoodsService {
     Food food = await foodRepository.getSpecificFoodById(foodId);
     return food;
   }
+
+  Future<String> getSpecificFoodNameById(String foodId) async {
+    Food food = await getSpecificFoodById(foodId);
+    return food.name;
+  }
 }

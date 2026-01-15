@@ -9,7 +9,8 @@ import "package:nham_nham/widgets/home_screen_widget/categories.widget.dart";
 import "package:nham_nham/widgets/home_screen_widget/restaurants.widget.dart";
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  final VoidCallback onOrderPlaced;
+  const HomeScreen({super.key , required this.onOrderPlaced});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               UserLocationPicker(),
-              Search(hintText: "Search Anything...",),
+              Search(hintText: "Search Anything..."),
               RestaurantDiscountCard(
                 discountCardList: [
                   DiscountCard(

@@ -4,16 +4,16 @@ import "package:nham_nham/models/order.dart";
 class OrderRepository {
   final OrderLocalDatasources _localDatasources;
 
-  OrderRepository({
-    required OrderLocalDatasources orderLocalDatasources,
-  }) : _localDatasources = orderLocalDatasources;
+  OrderRepository({required OrderLocalDatasources orderLocalDatasources})
+    : _localDatasources = orderLocalDatasources;
 
   Future<List<Order>> loadOrder() async {
     await _localDatasources.loadOrder();
     return _localDatasources.orderData;
   }
 
-  void addOrder(Order order) {
-    _localDatasources.addOrder(order);
+  Future<void> addOrder(Order order) async {
+    await _localDatasources.loadOrder();
+    await _localDatasources.addOrder(order);
   }
 }
